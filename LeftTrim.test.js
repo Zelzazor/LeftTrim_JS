@@ -1,7 +1,13 @@
+const LTrim = require('./LeftTrim');
 
+test('Not expecting a string (number)', ()=>{
+    expect(()=>{LTrim(423)}).toThrow();
+    
+});
 
-test('Not expecting a string', ()=>{
-    expect(LTrim(423)).toThrow();
+test('Not expecting a string (object)', ()=>{
+    expect(()=>{LTrim({})}).toThrow();
+    
 });
 
 test('Left Trimming Hello', ()=>{
